@@ -6,7 +6,17 @@ const repeatString = function (string, num) {
   )
     return 'ERROR';
 
-  return string.repeat(num);
+  /*  Non-looping solution
+   */
+  // return string.repeat(num);
+
+  /*  Looping solution
+   */
+  let newString = '';
+  for (const _ of Array(num)) {
+    newString += string;
+  }
+  return newString;
 };
 
 // Do not edit below this line
